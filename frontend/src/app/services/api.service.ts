@@ -28,7 +28,7 @@ export class ApiService {
       password,
     };
     // server call to register an account and return response to register component
-    return this.http.post('http://localhost:3000/register', body);
+    return this.http.post('http://localhost:4000/register', body);
   }
 
   //login
@@ -38,17 +38,17 @@ export class ApiService {
       password,
     };
     // server call to register an account and return response to login component
-    return this.http.post('http://localhost:3000/login', body);
+    return this.http.post('http://localhost:4000/login', body);
   }
 
   //all products api
   getAllProducts() {
-    return this.http.get('http://localhost:3000/all-products');
+    return this.http.get('http://localhost:4000/all-products');
   }
 
   //view products api
   viewProduct(productId: any) {
-    return this.http.get('http://localhost:3000/view-product/' + productId);
+    return this.http.get('http://localhost:4000/view-product/' + productId);
   }
 
   // appending token to http headee
@@ -72,7 +72,7 @@ export class ApiService {
       productId,
     };
     return this.http.post(
-      'http://localhost:3000/addToWishlist/',
+      'http://localhost:4000/addToWishlist/',
       body,
       this.appendToken()
     );
@@ -85,7 +85,7 @@ export class ApiService {
       productId,
     };
     return this.http.put(
-      'http://localhost:3000/removeFromWishlist/',
+      'http://localhost:4000/removeFromWishlist/',
       body,
       this.appendToken()
     );
@@ -99,7 +99,7 @@ export class ApiService {
       count,
     };
     return this.http.post(
-      'http://localhost:3000/addToCart/',
+      'http://localhost:4000/addToCart/',
       body,
       this.appendToken()
     );
@@ -113,7 +113,7 @@ export class ApiService {
       count,
     };
     return this.http.put(
-      'http://localhost:3000/updateCartItemCount/',
+      'http://localhost:4000/updateCartItemCount/',
       body,
       this.appendToken()
     );
@@ -126,7 +126,7 @@ export class ApiService {
       productId,
     };
     return this.http.put(
-      'http://localhost:3000/removeFromCart/',
+      'http://localhost:4000/removeFromCart/',
       body,
       this.appendToken()
     );
@@ -138,7 +138,7 @@ export class ApiService {
       email,
     };
     return this.http.put(
-      'http://localhost:3000/emptyCart/',
+      'http://localhost:4000/emptyCart/',
       body,
       this.appendToken()
     );
@@ -168,7 +168,7 @@ export class ApiService {
       detailes,
     };
     return this.http.post(
-      'http://localhost:3000/addToCheckout/',
+      'http://localhost:4000/addToCheckout/',
       body,
       this.appendToken()
     );
@@ -176,13 +176,13 @@ export class ApiService {
 
   getWishlist(email: any) {
     return this.http.get(
-      'http://localhost:3000/getWishlist/' + email,
+      'http://localhost:4000/getWishlist/' + email,
       this.appendToken()
     );
   }
   getMyOrders(email: any) {
     return this.http.get(
-      'http://localhost:3000/getMyOrders/' + email,
+      'http://localhost:4000/getMyOrders/' + email,
       this.appendToken()
     );
   }

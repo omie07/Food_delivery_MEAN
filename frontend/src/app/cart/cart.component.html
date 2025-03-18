@@ -80,7 +80,7 @@
               </option>
             </select>
           </div>
-          <div class="col fw-bold">${{ product.price }}</div>
+          <div class="col fw-bold">₹{{ product.price }}</div>
           <div class="col">
             <a (click)="removeFromCart(product.id)" class="text-danger btn"
               ><i class="fa-solid fa-trash"></i
@@ -109,7 +109,7 @@
           No of Items: <span>{{ cart.length }}</span>
         </p>
         <h5 class="animate__animated animate__shakeX">
-          Grant Total: $<span>{{ total }}</span>
+          Grant Total: ₹<span>{{ total }}</span>
         </h5>
       </div>
 

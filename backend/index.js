@@ -10,8 +10,8 @@ server.use(
   })
 );
 server.use(express.json());
-server.listen(3000, () => {
-  console.log("cart server listening at port number 3000");
+server.listen(4000, () => {
+  console.log("cart server listening at port number 4000");
 });
 
 // application specific middleware
